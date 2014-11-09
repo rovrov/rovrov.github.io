@@ -1,0 +1,40 @@
+.post-content-truncate h1 {
+	font-size: 33.75px;
+	color: #333;
+}
+
+.post-content-truncate h2 {
+	font-size: 26.25px;
+	color: #333;
+}
+
+.post-content-truncate h3 {
+	font-size: 18.75px;
+	color: #333;
+}
+
+.post-content-truncate img {
+	max-width: 400px;
+}
+
+.navbar-nav > li > a {padding-top:8px !important; padding-bottom:8px !important;}
+.navbar {min-height:32px !important}
+.navbar-brand {padding-top:8px !important; padding-bottom:8px !important;}
+
+.cal_date {
+	display:inline-block;
+	vertical-align: middle;
+	opacity: 0.8;
+}
+
+.mytagbox {
+	display:inline-block;
+	vertical-align: middle;
+	padding-left: 20px;
+	opacity: 0.8;
+}
+
+.post_info {
+	padding-left: 2px;
+	margin-bottom: 10px;
+}

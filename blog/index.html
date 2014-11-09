@@ -1,0 +1,36 @@
+---
+layout: default
+title: Roman&#8217;s blog
+---
+
+<!-- This loops through the paginated posts -->
+{% for post in paginator.posts %}
+  <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+  <div class="post_info">
+    <div class="cal_date"><i class="fa fa-calendar"></i> <span class="date">{{ post.date | date: "%-d %B %Y" }}</span></div>
+    {% unless post.tags == empty %}
+      <ul class="tag_box inline mytagbox">
+        <li><i class="glyphicon glyphicon-tags"></i></li>
+        {% assign tags_list = post.tags %}
+        {% include JB/tags_list %}
+      </ul>
+    {% endunless %} 
+  </div>
+  <div class="post-content-truncate">
+    {% if post.content contains "<!-- more -->" %}
+      {{ post.content | split:"<!-- more -->" | first % }}
+    {% else %}
+      {{ post.content | strip_html | truncatewords:100 }}
+    {% endif %}
+  </div>
+  <div><a href="{{ site.baseurl }}{{ post.url }}">Read more...</a></div>
+  <hr/>
+{% endfor %}
+
+<!-- Pagination links -->
+<nav>
+  <ul class="pager">
+    <li class="previous{% unless paginator.previous_page %} disabled{% endunless %}"><a href="{{paginator.previous_page_path | replace: '/index.html', '/'}}">&larr; Older</a></li>
+    <li class="next{% unless paginator.next_page %} disabled{% endunless %}"><a href="{{paginator.next_page_path}}">Newer &rarr;</a></li>
+  </ul>
+</nav>
