@@ -1,7 +1,8 @@
 ---
 layout: post
-category : blog
-tags : [blog, jekyll, bootstrap]
+category: blog
+tags: [blog, jekyll, bootstrap]
+date: 2014-11-08 18:00:00 -0500
 ---
 {% include JB/setup %}
 
