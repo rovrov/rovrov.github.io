@@ -20,7 +20,7 @@ title: Roman&#8217;s blog
     {% if post.content contains "<!-- more -->" %}
       {{ post.content | split:"<!-- more -->" | first % }}
     {% else %}
-      {{ post.content | strip_html | truncatewords:100 }}
+      {{ post.content }}
     {% endif %}
   </div>
   <div><a href="{{ site.baseurl }}{{ post.url }}">Read more...</a></div>
