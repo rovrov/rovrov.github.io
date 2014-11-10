@@ -19,7 +19,7 @@
 
 .navbar-nav > li > a {padding-top:8px !important; padding-bottom:8px !important;}
 .navbar {min-height:32px !important}
-.navbar-brand {padding-top:8px !important; padding-bottom:8px !important;}
+.navbar-brand {padding-top:8px !important; padding-bottom:8px !important; height: 36px;}
 
 .cal_date {
 	display:inline-block;
