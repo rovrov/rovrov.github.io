@@ -22,7 +22,7 @@ Post previews and pagination did not come with JB. [Read More without plugin](ht
 
 {% highlight yaml %}
 paginate: 5
-paginate_path: "blog/page:num"  # my blog lives at /blog/
+paginate_path: "blog/page:num/"  # my blog lives at /blog/
 {% endhighlight %}
 
 and used [this pagination snippet](http://jekyllrb.com/docs/pagination/#render-the-paginated-posts) replacing the pangination links part with this bootstrap 3 version:
@@ -40,3 +40,7 @@ and used [this pagination snippet](http://jekyllrb.com/docs/pagination/#render-t
 {% endhighlight %}
 
 I also modified a few visual things here and there, probably had to figure out and change more than I originally expected but that was fun.
+
+### Trailing slashes
+
+It is better to have trailing slashes in all "pretty" urls such as `rovrov.com/blog/`. Otherwise, when browser is navigated to `rovrov.com/blog`, GH pages will respond `301 Moved Permanently` and redirect to the version with the trailing slash. That's why I have `paginate_path: blog/page:num/` and `permalink: /blog/:year/:month/:day/:title/` with trailing slashes.
