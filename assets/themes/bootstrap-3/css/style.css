@@ -95,6 +95,10 @@ body {
   font-size: 16px;
 }
 
+blockquote {
+  color: #777;
+}
+
 
 .post-content-truncate h1 {
   font-size: 33.75px;
@@ -146,3 +150,4 @@ body {
   margin: 15px;
   border: 1px solid #88f;
 }
+
