@@ -8,7 +8,7 @@ date: 2014-11-10 21:00:00 -0500
 
 My blog is on a [custom domain with GitHub Pages](https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages/). As it turns out, this configuration can cause some issues, for example, when the site is indexed by _a_ search engine.
 
-A few people have already posted about this, and [here](http://instantclick.io/github-pages-and-apex-domains) an update on the top of the post says "This is no longer true since at least August 2014. GitHub fixed this!". This note might refer to the bigger issue about the 5 second delay, although it made me think that GitHub does not do redirects anymore. It does:
+A few people have already posted about this, and [here](http://instantclick.io/github-pages-and-apex-domains) an update on the top of the post says: "This is no longer true since at least August 2014. GitHub fixed this!". This note might refer to the bigger issue about the 5 second delay described in that post, although it made me think maybe GitHub does not do redirects anymore. It still does sometimes:
 
 {% highlight bash %}
 $ curl -I rovrov.com
@@ -23,7 +23,7 @@ Note: this does not happen every time, but after a certain timeout the first req
 
 <!-- more -->
 
-Basically, GitHub Pages server replies with a `302` temporary redirect pointing to the same location as requested. The browser will have to request the same exact url once again and hope not to see a `302` this time. When I asked GH support if there is something can I do about this I got this not very encouraging response:
+Basically, GitHub Pages server replies with a `302` temporary redirect pointing to the same location as requested. The browser will have to request the same exact url once again and hope not to see a `302` this time. When I asked GH support if there is something can I do about this, I got this not very encouraging response:
 
 >  you will sometimes receive a 302 Found response in place of a 200 OK response from GitHub Pages sites because of DDoS mitigation software we have in place for all Pages sites
 >
