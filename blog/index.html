@@ -16,14 +16,16 @@ title: Roman&#8217;s blog
       </ul>
     {% endunless %} 
   </div>
-  <div class="post-content-truncate">
-    {% if post.content contains "<!-- more -->" %}
-      {{ post.content | split:"<!-- more -->" | first % }}
-    {% else %}
+  {% if post.content contains "<!-- more -->" %}
+    <div class="post-content-truncate">
+        {{ post.content | split:"<!-- more -->" | first % }}
+    </div>
+    <div><a href="{{ site.baseurl }}{{ post.url }}" class="btn btn-sm btn-default">Read more &rarr;</a></div>
+  {% else %}
+    <div class="post-content-truncate">
       {{ post.content }}
-    {% endif %}
-  </div>
-  <div><a href="{{ site.baseurl }}{{ post.url }}" class="btn btn-sm btn-default">Read more &rarr;</a></div>
+    </div>
+  {% endif %}
   <hr/>
 {% endfor %}
 
