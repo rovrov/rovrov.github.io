@@ -6,7 +6,7 @@ date: 2014-11-13 11:18:00 -0500
 ---
 {% include JB/setup %}
 
-[D3](http://d3js.org/) uses a very powerful data binding approach. Typically, examples show how to deal with very simple data, such as `[1,2,3]`. Let's have a look at what happens when data items are objects, for example
+[D3](http://d3js.org/) uses a very powerful data binding approach. However, many D3 examples show how to deal with very simple data, such as `[1,2,3]`. Let's have a look at what happens when data items are objects, for example
 
 {% highlight javascript %}
 var data = [
