@@ -1,7 +1,7 @@
 ---
 layout: post
 category: blog
-tags: [d3, data-binding]
+tags: [d3js, data-binding]
 date: 2014-11-13 11:18:00 -0500
 ---
 {% include JB/setup %}
