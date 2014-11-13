@@ -121,7 +121,7 @@ That's weird. How about swapping the objects in the `data` array without changin
 	</div>
 </div>
 
-As we only re-ordered the objects and still see some changes, it has something to do with indexes. In fact, by default D3 assumes that the objects are identified by their index in the data array, and this works well in many scenarios. Here, however, we don't want to use indexes and need to identify objects differently, which can be done using the `key` function in [selection.data(values, key)](https://github.com/mbostock/d3/wiki/Selections#data). For example, if we know the `label` is going to be unique then we can simply us it as as the key
+As we only re-ordered the objects and still see some changes, it has something to do with indexes. In fact, by default D3 assumes that the objects are identified by their index in the data array, and this works well in many scenarios. Here, however, we don't want to use indexes and need to identify objects differently, which can be done by passing a `key` function to [selection.data(values, key)](https://github.com/mbostock/d3/wiki/Selections#data). For example, if we know the `label` is going to be unique then we can simply make the key function return it:
 
 {% highlight javascript %}
 selection.data(data, function(d) { return d.label; })
